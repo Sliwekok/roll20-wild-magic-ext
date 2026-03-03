@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wild Magic Roller</title>
+  <link rel="stylesheet" href="app/css/app.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="header">
+      <img src="assets/logo.jpg" alt="logo" class="logo">
+      <h1 class="title">Wild Magic</h1>
+    </header>
+
+    <main class="main">
+      <div class="controls">
+        <button id="rollBtn" class="btn btn-primary">Roll D100 → D20</button>
+        <button id="historyBtn" class="btn btn-secondary" title="Pokaż historię rzutów">History</button>
+        <div id="spinner" class="spinner" aria-hidden="true"></div>
+      </div>
+
+      <section id="resultCard" class="result-card" aria-live="polite">
+        <div class="dice-row">
+          <div class="badge" id="d100Badge">D100: —</div>
+          <div class="badge" id="d20Badge">D20: —</div>
+        </div>
+        <div id="typeBadge" class="type-badge">—</div>
+        <div id="description" class="description">Naciśnij <strong>Roll</strong>, aby wykonać rzut.</div>
+      </section>
+
+      <pre id="debug" class="debug" hidden></pre>
+    </main>
+
+    <footer class="footer">
+      <small>roll20 wild magic — lokalna lista efektów</small>
+    </footer>
+  </div>
+
+  <script type="module" src="app/js/popup.js"></script>
+</body>
+</html>

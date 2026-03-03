@@ -1,0 +1,16 @@
+{
+  "1": {
+    "1-5": {
+      "type": "bad",
+      "description": "Row 1 bad effect"
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Row 1 neutral effect"
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Row 1 good effect"
+    }
+  }
+}

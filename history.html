@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Roll History</title>
+  <link rel="stylesheet" href="app/css/app.css">
+</head>
+<body>
+  <div class="app" style="padding:12px; width:420px; height:600px;">
+    <header class="header">
+      <img src="assets/logo.jpg" alt="logo" class="logo">
+      <h1 class="title">Roll History</h1>
+    </header>
+
+    <main>
+      <div style="display:flex; gap:8px; margin-bottom:10px;">
+        <button id="clearBtn" class="btn">Clear</button>
+        <button id="exportBtn" class="btn">Copy</button>
+      </div>
+      <section id="historyList" class="result-card"></section>
+    </main>
+
+    <footer class="footer">
+      <small>Historia rzutów lokalnie w extension storage</small>
+    </footer>
+  </div>
+
+  <script src="app/js/history.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "roll20 wild magic",
+  "description": "Roll z dice and get a random wild magic surge effect from the custom list",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+          "16": "assets/logo.jpg",
+          "32": "assets/logo.jpg",
+          "48": "assets/logo.jpg",
+          "128": "assets/logo.jpg"
+        },
+      "icons": {
+        "16": "assets/logo.jpg",
+        "32": "assets/logo.jpg",
+        "48": "assets/logo.jpg",
+        "128": "assets/logo.jpg"
+      }
+    },
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": [
+    "*://www.roll20.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.roll20.net/*"],
+      "css": ["./app/css/app.css"],
+      "js": ["./app/js/app.js"]
+    }
+  ]
+}
