@@ -2,15 +2,1401 @@
   "1": {
     "1-5": {
       "type": "bad",
-      "description": "Row 1 bad effect"
+      "description": "You Polymorph into a hostile dragon and attack the nearest creature. At the start of each of your turns, you may make a Wis Save to gain control over your new form."
     },
     "6-15": {
       "type": "neutral",
-      "description": "Row 1 neutral effect"
+      "description": "You turn into a dragonborn and can only speak Draconic and barely understand Common."
     },
     "16-20": {
       "type": "good",
-      "description": "Row 1 good effect"
+      "description": "You transform into a dragon. The GM chooses an appropriate type, color, and duration."
+    }
+  },
+  "2": {
+    "1-5": {
+      "type": "bad",
+      "description": "You Polymorph into a dog."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "A talking spectral dog appears, that only you can see."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain a talking ethereal dog companion that appears and disappears on your command."
+    }
+  },
+  "3": {
+    "1-5": {
+      "type": "bad",
+      "description": "You Polymorph into a Small creature."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You slowly turn into a forest creature (deer, fox, squirrel, etc)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the druid Wild Shape feature."
+    }
+  },
+  "4": {
+    "1-5": {
+      "type": "bad",
+      "description": "You turn into a troglodyte and gain the Stench feature: an aura of 20ft, Con Save or become Poisoned."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You slowly turn into a reptile piece by piece (skin, nails, eyes, limbs)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the dragonborn Breath Weapon and grow scales in cool places."
+    }
+  },
+  "5": {
+    "1-5": {
+      "type": "bad",
+      "description": "You transform into a stone, marble, or metal statue of yourself, during which time you are considered Petrified."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "The appearance of your skin changes into stone, marble, or metal."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain +2 AC as your skin turns into hardened stone, marble, or metal."
+    }
+  },
+  "6": {
+    "1-5": {
+      "type": "bad",
+      "description": "You Polymorph into a raven."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You grow feathers on your arms, back, legs etc."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You grow black raven wings out of your back and gain a fly speed of 40ft."
+    }
+  },
+  "7": {
+    "1-5": {
+      "type": "bad",
+      "description": "Your touch turns all non-living things into rusted copper (reverse midas touch)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Every non-organic thing you touch, temporarily turns to gold."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "3d6 x 100 silver pieces appear randomly around you over the next hour."
+    }
+  },
+  "8": {
+    "1-5": {
+      "type": "bad",
+      "description": "You grow gills and can ONLY breathe water."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You grow gills on your neck."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the ability to breathe water."
+    }
+  },
+  "9": {
+    "1-5": {
+      "type": "bad",
+      "description": "You are Stunned and feel extreme pain for 1 round, make a Con Save each round until you are successful."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Every so often you freeze in place for a few seconds... no mechanics to this, just RP."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the effects of Time Stop but only for 30 seconds."
+    }
+  },
+  "10": {
+    "1-5": {
+      "type": "bad",
+      "description": "Your skin thins and is now vulnerable to Slashing and Piercing damage."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Your skin thickens and you gain Unarmored Defense. If you already have this, then increase AC by +1."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "If a blade hits your SKIN, you have resistance to Slashing and Piercing damage (cannot be wearing armor)."
+    }
+  },
+  "11": {
+    "1-5": {
+      "type": "bad",
+      "description": "All of your hair falls out."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "For the next hour, you are the opposite gender."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the ability to change the color of your skin, hair, and eyes at will."
+    }
+  },
+  "12": {
+    "1-5": {
+      "type": "bad",
+      "description": "You Polymorph into the nearest creature or the last creature you have seen."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You grow antlers, fur, horns, or some other beastly feature."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the ability to speak with animals permanently and can cast Beast Bond at will."
+    }
+  },
+  "13": {
+    "1-5": {
+      "type": "bad",
+      "description": "You shapeshift into a monkey that can still function as the player BUT has reduced Intelligence and is 'primal'."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You grow a tail."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You grow a prehensile tail that can function like another hand that can interact with any object as a free Action."
+    }
+  },
+  "14": {
+    "1-5": {
+      "type": "bad",
+      "description": "Two of your ability scores swap (for a bad result) at the GMs discretion."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Two of your ability scores swap (for a funny result) at the GMs discretion."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Two of your ability scores swap (for a good result) at the GMs discretion."
+    }
+  },
+  "15": {
+    "1-5": {
+      "type": "bad",
+      "description": "Every time you attack with a weapon or cast a spell, take 1d4 Force damage."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You gain a cantrip. Either the player or the GM has control over its uses... GM's choice."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You start to gain access to spells OR if you can already cast spells; different types than usual."
+    }
+  },
+  "16": {
+    "1-5": {
+      "type": "bad",
+      "description": "Next ally you speak to suffers the effects of Bane."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Next ally you speak to gains the effects of Bless."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the Bardic Inspiration feature."
+    }
+  },
+  "17": {
+    "1-5": {
+      "type": "bad",
+      "description": "You lose 10ft of movement and triple in weight density (can't jump)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You weigh 1/10 of your normal weight (Feather Fall)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain 10ft of movement and triple your jump distance."
+    }
+  },
+  "18": {
+    "1-5": {
+      "type": "bad",
+      "description": "You suffer 1 level of Exhaustion."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You understand how to use ALL weapons and have an urge to use a different one."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You get a surge of adrenaline and gain one use of Action Surge."
+    }
+  },
+  "19": {
+    "1-5": {
+      "type": "bad",
+      "description": "Your eyesight goes dark and you are considered Blinded."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You gain the ability of echolocation (hear sounds)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain Blindsight."
+    }
+  },
+  "20": {
+    "1-5": {
+      "type": "bad",
+      "description": "You cannot speak, only bubbles come out."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You must shout when you speak."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can now speak telepathically."
+    }
+  },
+  "21": {
+    "1-5": {
+      "type": "bad",
+      "description": "You are surrounded by a faint, offensive odor. You gain DisADV on all Charisma Checks, and potentially even Stealth Checks."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You lose the ability to smell or taste."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Your sense of smell strengthens. You gain Blindsight with a radius of 10ft and ADV on Perception Checks related to smell."
+    }
+  },
+  "22": {
+    "1-5": {
+      "type": "bad",
+      "description": "You suffer the effects of Slow."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You feel the rushes of Haste and Slow back and forth (no spell effects, only RP)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the effects of Haste."
+    }
+  },
+  "23": {
+    "1-5": {
+      "type": "bad",
+      "description": "You LOSE prof. in the next proficient skill check you make (not casting spells or making attacks)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You feel a strong sense of confidence and ability to learn. You permanently gain prof. in the next thing you attempt to do (skill / tool check)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Your knowledge and skill has ascended! You are now prof. in everything you do."
+    }
+  },
+  "24": {
+    "1-5": {
+      "type": "bad",
+      "description": "All allies around you must make a Wis Save or suffer the effects of Bane."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Allies around you gain the effects of Bless."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Allies within 20ft of you gain +2 to attack and damage rolls on any melee weapon / spell attack they make."
+    }
+  },
+  "25": {
+    "1-5": {
+      "type": "bad",
+      "description": "You can only see non-living things (all living things are invisible to you)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Your eyes turn white with a subtle glow."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the ability to look through walls for 1 hour."
+    }
+  },
+  "26": {
+    "1-5": {
+      "type": "bad",
+      "description": "A 30ft cube Hypnotic Pattern appears with you at the center. All creatures within the pattern must make a Wis Save or fall asleep for 1 minute or until they take damage."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You get extremely drowsy and have small narcoleptic flare ups. Basically you fall asleep randomly (no mechanical punishments, just RP)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You IMMEDIATELY gain the effects of a Long Rest and future Long and Short Rests require half the amount of time as normal."
+    }
+  },
+  "27": {
+    "1-5": {
+      "type": "bad",
+      "description": "You lose 2 (or more) in a primary ability score but gain 2 in a secondary ability."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You gain a +1 to one ability score and a -1 to another (GM choice)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain +2 (or more) in a primary ability score but lose 2 from a secondary ability."
+    }
+  },
+  "28": {
+    "1-5": {
+      "type": "bad",
+      "description": "You gain the ability to fly, but once you exceed 30ft above ground you lose the ability."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You can levitate up to 10ft high, but no farther and your move speed is reduced to 10ft."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain a fly speed of 30ft."
+    }
+  },
+  "29": {
+    "1-5": {
+      "type": "bad",
+      "description": "You suffer the effects of Enlarge/Reduce and shrink by one size category."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You grow noticeably taller or shorter (GM choice)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the effects of Enlarge/Reduce and grow to one size category larger."
+    }
+  },
+  "30": {
+    "1-5": {
+      "type": "bad",
+      "description": "You gain over 100lbs and your movement speed is halved."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You must move at full speed any time you move anywhere (always sprinting)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Your movement speed doubles and you can dash as a Bonus Action."
+    }
+  },
+  "31": {
+    "1-5": {
+      "type": "bad",
+      "description": "Subtract 2 from your Strength modifier."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Your muscles swell and grow, and look FAR more defined."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Add 2 to your Strength modifier."
+    }
+  },
+  "32": {
+    "1-5": {
+      "type": "bad",
+      "description": "Subtract 2 from your Dexterity modifier."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You become 'clumsy', constantly tripping / dropping things."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Add 2 to your Dexterity modifier."
+    }
+  },
+  "33": {
+    "1-5": {
+      "type": "bad",
+      "description": "Subtract 2 from your Constitution modifier."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Everything hurts when it touches you."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Add 2 to your Constitution modifier."
+    }
+  },
+  "34": {
+    "1-5": {
+      "type": "bad",
+      "description": "Subtract 2 from your Intelligence modifier."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You can no longer read, write, do math, or even count."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Add 2 to your Intelligence modifier."
+    }
+  },
+  "35": {
+    "1-5": {
+      "type": "bad",
+      "description": "Subtract 2 from your Wisdom modifier."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You become very gullible."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Add 2 to your Wisdom modifier."
+    }
+  },
+  "36": {
+    "1-5": {
+      "type": "bad",
+      "description": "Subtract 2 from your Charisma modifier."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You become more attractive and well-spoken."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Add 2 to your Charisma modifier."
+    }
+  },
+  "37": {
+    "1-5": {
+      "type": "bad",
+      "description": "A Fireball explodes centered on you, requiring Dex Saves in a 20ft radius."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Any flammable item you touch, that you aren’t already wearing or carrying, bursts into flame."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "A large ball of fire (Delayed Blast Fireball) is at your control similar to Flame Sphere. You can move it 20ft/round and detonate it on command."
+    }
+  },
+  "38": {
+    "1-5": {
+      "type": "bad",
+      "description": "You stand at the center of a circular Wall of Fire with a radius of 15ft. Any creature in any of the spaces covered by this fire must make a Dex Save or take Fire damage."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You catch on fire, burning each round for 1d4 Fire damage."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain control of a fire aura that you can turn on or off, dealing 1d4 Fire damage within 5ft of you, and are now resistant to Fire damage."
+    }
+  },
+  "39": {
+    "1-5": {
+      "type": "bad",
+      "description": "All creatures within 30ft of you must make a Str Save or get pulled towards you OR pushed away from you (whichever would be WORSE)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "A gentle gust of wind blows outward from you. All creatures within 40ft of you can feel it, but it otherwise does nothing."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "All creatures within 30ft of you make a Str Save or get pulled towards you OR pushed away from you (whichever would be BETTER)."
+    }
+  },
+  "40": {
+    "1-5": {
+      "type": "bad",
+      "description": "A loud boom emanates from you. All creatures within 15ft take 2d8 Thunder damage and must make a Con Save against your Spell Save DC or be Deafened."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Any creature you touch takes 2d6 Lightning damage (the GM could have you make a melee spell attack if needed)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can cast Call Lightning for free as an Action."
+    }
+  },
+  "41": {
+    "1-5": {
+      "type": "bad",
+      "description": "Every time you touch an organic creature you make a Str Save or YOU fly backwards 30ft."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You gain the ability to cast Mage Hand with just your thoughts."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "The next creature you touch/attack/cast a spell on flies back 30ft."
+    }
+  },
+  "42": {
+    "1-5": {
+      "type": "bad",
+      "description": "At your location a Delayed Blast Fireball forms and erupts in 1d4 rounds."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "At the start of your next turn there is a burst of flames and creatures within 10ft of you take 1d6 Fire damage."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can now permanently cast Burning Hands but must learn to control it (Cha Save to try and control it)."
+    }
+  },
+  "43": {
+    "1-5": {
+      "type": "bad",
+      "description": "You uncontrollably levitate upwards. Lightning shoots out of you to the 3 closest targets for 3d10 Lightning damage."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You slowly start levitating upwards, uncontrollably (this could be bad)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can cast Levitate on yourself at will, but it only lasts 30 seconds."
+    }
+  },
+  "44": {
+    "1-5": {
+      "type": "bad",
+      "description": "Blinding light flashes from you in a 60ft radius all within range must make a Con Save or be Blinded. You are now vulnerable to Radiant damage."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You glow with light out to a distance of 60ft from you."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Light glows out 60ft from you that you can activate/ deactivate, and you can cast Daylight at will."
+    }
+  },
+  "45": {
+    "1-5": {
+      "type": "bad",
+      "description": "You are the center of a Circle of Death (only 4d6) and a cloud of magical darkness is left behind."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "All light sources within a 60ft radius are extinguished."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain magical Darkvision and can cast Darkness as an Action."
+    }
+  },
+  "46": {
+    "1-5": {
+      "type": "bad",
+      "description": "An Earthquake triggers centered around you and you can control sections of earth that are not affected."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Your feet constantly sink into the ground."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can control earth and stone within 10ft of you."
+    }
+  },
+  "47": {
+    "1-5": {
+      "type": "bad",
+      "description": "You stand at the center a circular Wall of Force with a radius of 15ft. Any creature in any of the spaces covered by this wall must make a Dex Save or take Force damage."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You and all creatures within 30ft of you gain vulnerability to Force damage. When you make an attack, a single Magic Missile hits a random target."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain control of a small Wall of Force that you can move around, 30ft at a time, as a Bonus Action. The wall is 10ft tall and 10ft wide (or more)."
+    }
+  },
+  "48": {
+    "1-5": {
+      "type": "bad",
+      "description": "You fire a Magic Missile twice at each of your party members."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Every so often a Magic Missile fires off at one of your party members whenever ____ happens (ex. They get within 20ft of each other)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You fire a Magic Missile three times at each enemy within 120ft."
+    }
+  },
+  "49": {
+    "1-5": {
+      "type": "bad",
+      "description": "Everything within 20ft is pulled 10ft towards you."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "All creatures within 20ft of you must make a Str Save or be knocked Prone."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "All hostile creatures make a Str Save or fly back 30ft and take massive Force damage."
+    }
+  },
+  "50": {
+    "1-5": {
+      "type": "bad",
+      "description": "You must make a Str Save or fly towards a target (GMs choice). You do not take damage on a fail but still get thrown towards the target."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You are “magnetically” drawn towards a target (GMs choice). Gain 5ft of movement when running towards them and lose 5ft of movement when moving away from them."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain Telekinesis as an Action but only to pull things towards you."
+    }
+  },
+  "51": {
+    "1-5": {
+      "type": "bad",
+      "description": "Oil pours off of you, giving off an odor and leaving a trail and residue everywhere."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "A puddle appears around you triggering the effects of Grease."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can cast Grease, as an Action, at will now."
+    }
+  },
+  "52": {
+    "1-5": {
+      "type": "bad",
+      "description": "You teleport to an alternate plane of existence."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You teleport for a few seconds to places that could be helpful or hurtful (GM choice)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can now teleport to a place you have been (1 use)."
+    }
+  },
+  "53": {
+    "1-5": {
+      "type": "bad",
+      "description": "You phase into an ethereal version of yourself, as if under the effects of Blink."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "For the next minute, you are under the effects Blink, under GM control."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the ability to cast Blink as a Bonus Action."
+    }
+  },
+  "54": {
+    "1-5": {
+      "type": "bad",
+      "description": "A duplicate of yourself spawns into existence and instantly starts to run away and cause problems for you."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "A duplicate of yourself appears in the nearest open space to you. It can take Actions independently and goes on the same initiative as you. However, any damage it takes as well as any spell slots it uses applies to you as well."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain control of a duplicate that you can summon once per day (has 1 HP). It looks like you and follows your commands."
+    }
+  },
+  "55": {
+    "1-5": {
+      "type": "bad",
+      "description": "A magic item in your possession becomes mundane (temporarily?)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "A mundane item on your person gets duplicated. (Perception Check to notice a wisp of magic flying into their gear)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "A mundane or magic item in your possession gets duplicated (GM discretion)."
+    }
+  },
+  "56": {
+    "1-5": {
+      "type": "bad",
+      "description": "The effects of Darkness appear. It is centered on and moves with you."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "The effects of Fog Cloud appear. It is centered on and moves with you."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the effects of Gaseous Form, that you can activate with a Bonus Action and the fly speed increases to 30ft."
+    }
+  },
+  "57": {
+    "1-5": {
+      "type": "bad",
+      "description": "You trigger an Unseen Servant that is constantly plotting against and trying to sabotage you."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "A small illusory dog spawns and is under your command (it can talk but only like a small child)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the use of an Unseen Servant that comes and goes when called upon."
+    }
+  },
+  "58": {
+    "1-5": {
+      "type": "bad",
+      "description": "You keep uncontrollably teleporting into objects, bouncing off of things, or into dangerous positions."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You keep sporadically teleporting 10ft into the air and free falling, taking 1d6 Bludgeoning damage."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can freely cast Misty Step for free as a Bonus Action."
+    }
+  },
+  "59": {
+    "1-5": {
+      "type": "bad",
+      "description": "You are under the effects of Dominate Person, which causes you to attack everything in sight."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Your vision goes red and you start feeling extreme anger, hatred, or rage."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the barbarian Rage feature."
+    }
+  },
+  "60": {
+    "1-5": {
+      "type": "bad",
+      "description": "You are Frightened by the nearest creature until you succeed on a Wis Save."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You feel scared by, afraid of, or paranoid about a random ally."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the Frightful Presence ability to a range of 60ft, causing each creature of your choice to make a Wis Save or become Frightened for 1 minute."
+    }
+  },
+  "61": {
+    "1-5": {
+      "type": "bad",
+      "description": "You forget everything that happened within the last 24 hours."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You suffer the effects of Modify Memory (GM adds, takes away, or changes a memory)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the effects of Mind Blank."
+    }
+  },
+  "62": {
+    "1-5": {
+      "type": "bad",
+      "description": "You have a FULL case of amnesia and forget everything (except your class mechanics)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You forget who one of your party members is, temporarily."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the ability to control the memory of others with a Wis Save as an Action (Modify Memory)."
+    }
+  },
+  "63": {
+    "1-5": {
+      "type": "bad",
+      "description": "A demon equal to your level appears near you. It makes a Cha Save. If it fails, the demon is subservient, otherwise, it is hostile."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "An imp appears and makes a Cha Save. If it fails, the imp is subservient, otherwise, it is hostile."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "A succubus or incubus appears and you can make a pact with it to do your bidding, the better the deal, the more they will do."
+    }
+  },
+  "64": {
+    "1-5": {
+      "type": "bad",
+      "description": "You are now under the effects of Confusion."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You get confused very easily now and have to be told everything 2-3 times before it makes sense (RP effects only)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can look creatures in the eye and cast Confusion. You must be within 15ft and either in front of them or have them looking at you."
+    }
+  },
+  "65": {
+    "1-5": {
+      "type": "bad",
+      "description": "(Don't tell PC how this works) Every creature within 60ft of you that hears you speak only hears insults as if you are casting Vicious Mockery at 1st-level."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You can now only say EITHER very hurtful things, or very kind things (Super MEAN / Super NICE)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "(Don't tell PC how this works) Everytime you speak to anyone, they gain the effects of Bless or Guidance and can add 1d4 to the next thing they do."
+    }
+  },
+  "66": {
+    "1-5": {
+      "type": "bad",
+      "description": "You must now speak in an accent, pig latin, rhyme, or sing (GM choose one) or take 4d6 Psychic damage."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Everything you say now must rhyme. If it doesn't, you take 1d6 Psychic damage."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "If spoken in a rhyme or sang you have ADV on the next thing you do that the rhyme/ song was about."
+    }
+  },
+  "67": {
+    "1-5": {
+      "type": "bad",
+      "description": "You can only speak the phrases of others around you (like a kenku). If you need to cast a spell with a verbal component, someone else around you must speak it first, so you can too after."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Every so often you MUST repeat phrases of others around you (like a parrot)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "As an Action you can suggest an Action for a creature to do over and over again (like Command, but on repeat) They must make a Wis Save."
+    }
+  },
+  "68": {
+    "1-5": {
+      "type": "bad",
+      "description": "You HAVE to lie : You can NOT tell the truth."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You feel compelled to insult everyone you come in contact with. Not doing this makes you suffer 2d4 Psychic damage."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Every time you compliment someone... they heal for 1d4."
+    }
+  },
+  "69": {
+    "1-5": {
+      "type": "bad",
+      "description": "You gain the influence of an evil patron."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You gain the influence of a neutral patron."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the influence of a good patron."
+    }
+  },
+  "70": {
+    "1-5": {
+      "type": "bad",
+      "description": "You take 1d8 Radiant damage if you do anything “evil” or lie."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Your touch automatically casts Light on creatures."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can Imbue items with 1d8 Radiant energy that heals or harms."
+    }
+  },
+  "71": {
+    "1-5": {
+      "type": "bad",
+      "description": "You completely believe everything you hear."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You can detect the thoughts of 1 creature you can see within 30ft of you for 1 minute."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can immediately tell when anyone is lying."
+    }
+  },
+  "72": {
+    "1-5": {
+      "type": "bad",
+      "description": "You can now only see through the eyes of the ally that is nearest to you."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "A third eye appears on your forehead giving you ADV on sight-based Perception Checks."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "A third eye appears on your forehead giving you the ability to cast Scrying to a location you can see."
+    }
+  },
+  "73": {
+    "1-5": {
+      "type": "bad",
+      "description": "You temporarily forget how to speak Common."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You can understand all languages, temporarily."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You permanently learn one relevant language."
+    }
+  },
+  "74": {
+    "1-5": {
+      "type": "bad",
+      "description": "You go back in time (GM chooses a length of time). You disappear from the rest of the party for between 6 seconds - 1 min, then reappear in the same spot... careful what you do."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You get a vision from the past or future (GM story discretion)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You go forwards in time (GM chooses a length of time). You disappear from the rest of the party for between 6 seconds - 1 min, then reappear in the same spot... what will you learn?"
+    }
+  },
+  "75": {
+    "1-5": {
+      "type": "bad",
+      "description": "You get a glimpse of a possible “worst-case scenario” of something relevant to you in the future."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You get a glimpse of an event from the past about something important that gives you clues or useful hints."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You teleport back in time to a place of great importance... but be careful what you do..."
+    }
+  },
+  "76": {
+    "1-5": {
+      "type": "bad",
+      "description": "An item on your person becomes cursed with a sentient demon."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You start to hear voices emanating from one of the items on your person... and think it’s sentient (GM secret... it’s not)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "One randomly chosen item in your inventory becomes sentient."
+    }
+  },
+  "77": {
+    "1-5": {
+      "type": "bad",
+      "description": "Player unknowingly has a WISH spell... but a BAD kind... that ONLY manifests itself as a player’s worst fear or something that would be BAD if it happened. Can happen instantly or “when the time is right”."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "A surge of energy flows through your body and makes your eyes have a subtle glow to them. “Magical Possibilities” (GM have something special happen based on the players wants and desires, instantly or in the future, then eye glow stops.)"
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Player unknowingly has control over a WISH spell. The next thing they want to happen, does. (GM Note: DO NOT TELL THEM, just describe a surge and that's all... wait for them to naturally say something in character.)"
+    }
+  },
+  "78": {
+    "1-5": {
+      "type": "bad",
+      "description": "You are Blinded during the day."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You gain Darkvision or Improved Darkvision if you already have Darkvision."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the effects of See Invisibility."
+    }
+  },
+  "79": {
+    "1-5": {
+      "type": "bad",
+      "description": "If you tell the truth you take heavy Psychic damage."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Every time you lie your eyes glow a golden yellow."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can cast Zone of Truth at will."
+    }
+  },
+  "80": {
+    "1-5": {
+      "type": "bad",
+      "description": "You get a vision of yourself dying (made up by GM) make a Wis Save or be Frightened."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You have a vision of an important story element and gain key info."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You have a vision of what the BBEG is doing right now."
+    }
+  },
+  "81": {
+    "1-5": {
+      "type": "bad",
+      "description": "You have an invisible Mage Hand that does nothing but steal or pull pranks on those around you, making you look guilty for it."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Whatever object is in your hand (or the next one you touch) you can now move it around telepathically within 30ft of yourself."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the service of a 2nd-level Spiritual Weapon."
+    }
+  },
+  "82": {
+    "1-5": {
+      "type": "bad",
+      "description": "You have a momentary vision of your own death. You are Frightened until you succeed on a Wis Save."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You get a strong sense that you can tell the future... but you can't (GM can either lie to the player and give false visions, or let them know the truth and just RP it)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "If you touch a creature you can get a vision of how they might die."
+    }
+  },
+  "83": {
+    "1-5": {
+      "type": "bad",
+      "description": "You can now ONLY see invisible creatures."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You gain control of an Arcane Eye but you can ONLY see through it, and are otherwise Blinded."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You now have Truesight."
+    }
+  },
+  "84": {
+    "1-5": {
+      "type": "bad",
+      "description": "You draw in health from allies around you. Targets of this effect make a Con Save or you drain 2 Hit Dice (or deal Necrotic damage) from each within 60ft... You like this feeling and want more."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Every creature within 15ft of you takes 2 Necrotic damage. If you are wounded (below 1/2 health) you regain HP equal to half the amount of damage dealt."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the ability to use the Hit Dice from one ally and apply it to another, within 30ft, siphoning life from one to the other."
+    }
+  },
+  "85": {
+    "1-5": {
+      "type": "bad",
+      "description": "Roll a Hit Dice and subtract that much from your HP maximum."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You can either cure one disease or poison effect OR gain one disease or poison effect. (GM Choice)"
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Roll a Hit Dice and add that much to your HP maximum."
+    }
+  },
+  "86": {
+    "1-5": {
+      "type": "bad",
+      "description": "You suffer one permanent Death Save failure."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You must make a Death Save, and permanently gain the result."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain one permanent Death Save success."
+    }
+  },
+  "87": {
+    "1-5": {
+      "type": "bad",
+      "description": "All food you touch becomes tainted w/ poison (find creative solution to eat food)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "All food and drink within 30ft of you gains the effects of Purify Food and Drink."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You permanently gain the effects of Detect Poison and Disease."
+    }
+  },
+  "88": {
+    "1-5": {
+      "type": "bad",
+      "description": "The next creature you kill comes back from the dead with a life-long vengeance to hunt you down and kill you."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "The next creature that dies, in the next minute, returns as a ghost and haunts whomever killed it."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "The next creature that falls Unconscious (or dies) you can bring back with just a touch and heal up to an amount of HP equal to your character level."
+    }
+  },
+  "89": {
+    "1-5": {
+      "type": "bad",
+      "description": "You immediately drop to 0 HP."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You must touch an ally once every minute or fall Unconscious. An ally touching you brings you back to consciousness at 1 HP."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You immediately heal to full health and gain the Lay on Hands feature with (level appropriate charges)."
+    }
+  },
+  "90": {
+    "1-5": {
+      "type": "bad",
+      "description": "(GM chooses target) You are bound by voodoo to this target, anything that happens to them (damage and effects) happens to you too."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "(GM chooses target) You now must act like and be like that person, doing everything they do."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "(GM chooses target) Your soul is bound to a target and you can now cast spells through them and use each other's Hit Dice."
+    }
+  },
+  "91": {
+    "1-5": {
+      "type": "bad",
+      "description": "During stressful situations (GM discretion) you take 1d6 Necrotic damage every round, slowly dying."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You constantly heal for 1 HP every 6 seconds."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Energy surges out of you, healing all allies within 30ft."
+    }
+  },
+  "92": {
+    "1-5": {
+      "type": "bad",
+      "description": "You are a magnet for all projectiles. Any projectile within 20ft of you gets redirected to you as the new target."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You immediately gain a magic shield of Temp HP (GMs discretion for an appropriate amount based on level and circumstance)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "All your allies within 30ft of you gain Temp HP. (choose an appropriate amount based on level and circumstance)"
+    }
+  },
+  "93": {
+    "1-5": {
+      "type": "bad",
+      "description": "You are at the center of an Antimagic Field that negates all magic up to ___ level (GM choice)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Magic cast around you starts to fade, act strange, malfunction, or wear off faster."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can now negate magic effects around you (gain the ability to cast Counterspell and Dispel Magic for free within 30ft of you)."
+    }
+  },
+  "94": {
+    "1-5": {
+      "type": "bad",
+      "description": "At the most random and inopportune times, magic surges from you and you create force fields around things (could be yourself, creature, or objects)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You are now trapped inside a magic dome of a material or force. How can you get out? (GM puzzle)"
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can now freely cast Shield as a Reaction."
+    }
+  },
+  "95": {
+    "1-5": {
+      "type": "bad",
+      "description": "A flock of small magic creatures surround and harass you in various ways (birds, squirrels, etc)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You gain the ability to Speak with Animals."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the services of a Phantom Steed or animal companion."
+    }
+  },
+  "96": {
+    "1-5": {
+      "type": "bad",
+      "description": "You become a beacon of light with beams of light shooting out of your body in all directions, all the way into the sky."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You become the source of Daylight."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You turn Invisible."
+    }
+  },
+  "97": {
+    "1-5": {
+      "type": "bad",
+      "description": "Plants grow around you and you become Restrained by them."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Illusory butterflies and flower petals flutter in the air around you in a 10ft radius for 1 minute."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You cast Mirror Image on yourself and it does not require Concentration."
+    }
+  },
+  "98": {
+    "1-5": {
+      "type": "bad",
+      "description": "You can only speak ____ (GM language choice)."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "The next thing you touch spawns an illusory mouth that functions as your only way to speak or make sounds."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You gain the ability to throw your voice, to a spot you can see, and you can cause creatures to make a Wis Save or be forced to say what you want."
+    }
+  },
+  "99": {
+    "1-5": {
+      "type": "bad",
+      "description": "You gain a 10ft aura of Silence around you."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "You make no sounds of any kind: footsteps or verbal."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "You can go Invisible at will, as a Bonus Action."
+    }
+  },
+  "100": {
+    "1-5": {
+      "type": "bad",
+      "description": "Nothing happens... yet. The GM secretly rolls on this table again but only rolls the d100 and takes a BAD result. The GM then triggers this effect at a very bad time for the target."
+    },
+    "6-15": {
+      "type": "neutral",
+      "description": "Nothing happens... yet. The GM secretly rolls on this table again and chooses when to trigger the effect they rolled (good/ bad/ funny timing)."
+    },
+    "16-20": {
+      "type": "good",
+      "description": "Nothing happens... yet. The GM secretly rolls on this table again but only rolls the d100 and takes a GOOD result. The GM then triggers this effect at a very good time for the target."
     }
   }
 }

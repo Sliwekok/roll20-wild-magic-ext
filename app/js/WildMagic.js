@@ -30,7 +30,7 @@ export const WildMagic = (() => {
         if (!outer) return { error: 'No mapping for outer key ' + outerKey };
         const entry = findRangeEntry(outer, d20);
         if (!entry) return { error: 'No inner range matched for d20=' + d20 };
-        return { outerKey, d100, d20, type: entry.type, description: entry.description };
+        return { outerKey, d100: d100, d20: d20, type: entry.type, description: entry.description };
     }
 
     // --- DOM helpers ---
@@ -131,12 +131,40 @@ export const WildMagic = (() => {
         }
     }
 
+    async function doRollHidden() {
+        try {
+            const data = await loadData();
+            const d100 = rollDie(100);
+            const d20 = rollDie(20);
+            const mapped = mapRollsToEffect(data, d100, d20);
+
+            if (mapped.error) {
+                console.error('Error mapping rolls:', mapped.error);
+                return null;
+            } else {
+                await appendHistoryItem({
+                    ts: Date.now(),
+                    d100: d100,
+                    d20: d20,
+                    type: mapped.type ?? '',
+                    description: mapped.description ?? ''
+                });
+
+                return mapped;
+            }
+        } catch (err) {
+            console.error('Error in doRollHidden:', err);
+            return null;
+        }
+    }
+
     // --- Exports ---
     return {
         doRollAndShow,
         loadData,
         rollDie,
         mapRollsToEffect,
-        appendHistoryItem
+        appendHistoryItem,
+        doRollHidden
     };
 })();
