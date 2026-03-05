@@ -25,6 +25,7 @@ export const WildMagic = (() => {
     }
 
     function mapRollsToEffect(data, d100, d20) {
+        if (d100 > 100) d100 = 100;
         const outerKey = String(Math.ceil(d100));
         const outer = data[outerKey];
         if (!outer) return { error: 'No mapping for outer key ' + outerKey };
