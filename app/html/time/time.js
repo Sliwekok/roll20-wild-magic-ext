@@ -1,41 +1,58 @@
-// function renderHistory(list) {
-//     const container = document.getElementById('timeList');
-//     if (!container) return;
-//     if (!list || list.length === 0) {
-//         container.innerHTML = '<div class="description">Brak zapisanych czasów.</div>';
-//         return;
-//     }
-//     container.innerHTML = list.map(item => {
-//         const time = new Date(item.ts).toLocaleString();
-//         return `<div style="margin-bottom:8px;padding:8px;border-radius:8px;background:rgba(255,255,255,0.02)">` +
-//             `<div style="font-weight:700">Czas: <span style="font-weight:800">${item.time}</span></div>` +
-//             `<div style="margin-top:6px">${item.created_at}</div>` +
-//             `</div>`;
-//     }).join('');
-// }
-//
-// function loadHistory() {
-//     if (!chrome || !chrome.storage) return Promise.resolve([]);
-//     return new Promise(resolve => {
-//         chrome.storage.local.get(['timeHistory'], res => {
-//             resolve(Array.isArray(res.timeHistory) ? res.timeHistory : []);
-//         });
-//     });
-// }
-//
-// function clearHistory() {
-//     return new Promise(resolve => {
-//         chrome.storage.local.set({ timeHistory: [] }, () => resolve());
-//     });
-// }
-// document.addEventListener('DOMContentLoaded', async () => {
-//     const clearBtn = document.getElementById('clearBtn');
-//
-//     const list = await loadHistory();
-//     renderHistory(list);
-//
-//     clearBtn.addEventListener('click', async () => {
-//         await clearHistory();
-//         renderHistory([]);
-//     });
-// });
+import {Time} from 'app/js/Time.js';
+
+const datetimeEl = document.getElementById('datetime');
+const labelEl = document.getElementById('label');
+const saveBtn = document.getElementById('saveBtn');
+const nowBtn = document.getElementById('nowBtn');
+const clearBtn = document.getElementById('clearBtn');
+const historyList = document.getElementById('historyList');
+
+async function refreshList() {
+    const list = await Time.getTimes();
+    historyList.innerHTML = '';
+    if (!list.length) {
+        const li = document.createElement('li');
+        li.textContent = 'Brak zapisanych czasów.';
+        historyList.appendChild(li);
+        return;
+    }
+
+    list.forEach(item => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${item.display}</strong>${item.label ? ' — ' + escapeHtml(item.label) : ''}
+            <div class="meta">ts: ${item.ts}</div>`;
+        historyList.appendChild(li);
+    });
+}
+
+function escapeHtml(s) {
+    if (!s) return '';
+    return s.replace(/[&<>"']/g, ch => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[ch]));
+}
+
+saveBtn.addEventListener('click', async () => {
+    const dt = datetimeEl.value; // format: "YYYY-MM-DDTHH:MM"
+    const label = labelEl.value.trim();
+    if (!dt) {
+        alert('Wybierz datę i godzinę albo użyj "Zapisz teraz".');
+        return;
+    }
+    await Time.addTime(dt, label);
+    await refreshList();
+});
+
+nowBtn.addEventListener('click', async () => {
+    const label = labelEl.value.trim();
+    await Time.addTime(Date.now(), label);
+    await refreshList();
+});
+
+clearBtn.addEventListener('click', async () => {
+    if (!confirm('Czy na pewno usunąć całą historię?')) return;
+    await Time.clearTimes();
+    await refreshList();
+});
+
+refreshList();

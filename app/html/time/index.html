@@ -6,6 +6,16 @@
     <title>Time</title>
     <link rel="stylesheet" href="../../css/app.css">
 </head>
+<style>
+    body { font-family: Arial, sans-serif; margin: 16px; }
+    .row { margin-bottom: 12px; }
+    label { display:block; margin-bottom: 4px; font-weight:600; }
+    input[type="text"], input[type="datetime-local"] { width: 100%; padding: 8px; box-sizing: border-box; }
+    button { padding: 8px 12px; margin-right:8px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom:8px; }
+    .meta { color:#666; font-size:0.9em; }
+</style>
 <body id="wildMagicApp">
 <div class="app" style="padding:12px; width:420px; height:600px;">
     <header class="header indexBtn">
@@ -14,16 +24,24 @@
     </header>
 
     <main>
-        <div style="display:flex; gap:8px; margin-bottom:10px;">
-            <button id="exportBtn" class="btn">Copy</button>
-            <div class="btn-group">
-                <label>
-                    Set time
-                    <input type="datetime-local" id="date" name="time">
-                </label>
-            </div>
+        <div class="row">
+            <label for="datetime">Wybierz datę i godzinę</label>
+            <input id="datetime" type="datetime-local" />
         </div>
-        <section id="timeList" class="result-card"></section>
+
+        <div class="row">
+            <label for="label">Etykieta (opcjonalnie)</label>
+            <input id="label" type="text" placeholder="np. Start turnieju, Przerwa ..." />
+        </div>
+
+        <div class="row">
+            <button id="saveBtn">Zapisz</button>
+            <button id="nowBtn">Zapisz teraz</button>
+            <button id="clearBtn">Wyczyść historię</button>
+        </div>
+
+        <h3>Historia (ostatnie)</h3>
+        <ul id="historyList"></ul>
     </main>
 
     <footer class="footer">
