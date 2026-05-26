@@ -15,25 +15,49 @@ onReady(() => {
 
         let initialized = false;
 
+        const triggeredMessages = new Set();
+        let debounceTimeout;
+
         const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.type !== 'childList') return;
+            clearTimeout(debounceTimeout);
+            debounceTimeout = setTimeout(() => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type !== 'childList') return;
 
-                mutation.addedNodes.forEach((node) => {
-                    if (node.nodeType !== 1) return;
+                    mutation.addedNodes.forEach((node) => {
+                        if (node.nodeType !== 1) return;
 
-                    const text = node.textContent?.trim();
-                    console.log('New node text:', text);
+                        const text = node.textContent?.trim();
+                        const textHash = text?.toLowerCase(); // używamy tekstu jako ID
 
-                    if (text && text.toLowerCase().includes('wild_magic') && initialized) {
-                        console.log('Matched wild_magic');
+                        if (text && text.toLowerCase().startsWith('wild_magic') && initialized) {
+                            if (!triggeredMessages.has(textHash)) {
+                                triggeredMessages.add(textHash);
+                                console.log('Matched wild_magic - TRIGGERED');
 
-                        chrome.runtime.sendMessage({
-                            type: 'WILD_MAGIC_TRIGGER'
-                        });
-                    }
+                                chrome.runtime.sendMessage({
+                                    type: 'WILD_MAGIC_TRIGGER'
+                                });
+
+                                setTimeout(() => triggeredMessages.delete(textHash), 3000);
+                            }
+                        }
+
+                        if (text && text.toLowerCase().startsWith('help') && initialized) {
+                            if (!triggeredMessages.has(textHash)) {
+                                triggeredMessages.add(textHash);
+                                console.log('Matched !help - TRIGGERED');
+
+                                chrome.runtime.sendMessage({
+                                    type: 'HELP_TRIGGER'
+                                });
+
+                                setTimeout(() => triggeredMessages.delete(textHash), 3000);
+                            }
+                        }
+                    });
                 });
-            });
+            }, 100);
 
             initialized = true;
         });
@@ -67,6 +91,15 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         if (message.wildMagic.error) return;
         // send to chat
         let command = "/w sliwekok Wild Magic Surge! Rolled D100: " + message.wildMagic.d100 + ", D20: " + message.wildMagic.d20 + ". Effect: " + message.wildMagic.description;
+        waitForChatAndSend(command);
+    }
+
+    if (message.type === 'HELP_ROLLED') {
+        console.log('HELP triggered from content script');
+
+        if (message.help.error) return;
+        // send to chat
+        let command = message.help.message;
         waitForChatAndSend(command);
     }
 });
