@@ -46,10 +46,23 @@ onReady(() => {
                         if (text && text.toLowerCase().startsWith('help') && initialized) {
                             if (!triggeredMessages.has(textHash)) {
                                 triggeredMessages.add(textHash);
-                                console.log('Matched !help - TRIGGERED');
+                                console.log('Matched help - TRIGGERED');
 
                                 chrome.runtime.sendMessage({
                                     type: 'HELP_TRIGGER'
+                                });
+
+                                setTimeout(() => triggeredMessages.delete(textHash), 3000);
+                            }
+                        }
+
+                        if (text && text.toLowerCase().startsWith('time') && initialized) {
+                            if (!triggeredMessages.has(textHash)) {
+                                triggeredMessages.add(textHash);
+                                console.log('Matched time - TRIGGERED');
+
+                                chrome.runtime.sendMessage({
+                                    type: 'TIME_TRIGGER'
                                 });
 
                                 setTimeout(() => triggeredMessages.delete(textHash), 3000);
@@ -100,6 +113,15 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         if (message.help.error) return;
         // send to chat
         let command = message.help.message;
+        waitForChatAndSend(command);
+    }
+
+    if (message.type === 'TIME_ROLLED') {
+        console.log('TIME triggered from content script');
+
+        if (message.help.error) return;
+        // send to chat
+        let command = message.time.message;
         waitForChatAndSend(command);
     }
 });

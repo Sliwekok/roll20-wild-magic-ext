@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Time</title>
+    <link rel="stylesheet" href="../../css/app.css">
+</head>
+<body id="wildMagicApp">
+<div class="app" style="padding:12px; width:420px; height:600px;">
+    <header class="header indexBtn">
+        <img src="../../../assets/logo.jpg" alt="logo" class="logo">
+        <h1 class="title">Time</h1>
+    </header>
+
+    <main>
+        <div style="display:flex; gap:8px; margin-bottom:10px;">
+            <button id="exportBtn" class="btn">Copy</button>
+            <div class="btn-group">
+                <label>
+                    Set time
+                    <input type="datetime-local" id="date" name="time">
+                </label>
+            </div>
+        </div>
+        <section id="timeList" class="result-card"></section>
+    </main>
+
+    <footer class="footer">
+        <small>Historia rzutów lokalnie w extension storage</small>
+    </footer>
+</div>
+
+<script type="module" src="../../js/popup.js"></script>
+<script src="./time.js"></script>
+</body>
+</html>

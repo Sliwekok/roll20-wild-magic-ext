@@ -1,6 +1,4 @@
-// WildMagic.js
 export const WildMagic = (() => {
-    // --- Core data loader ---
     async function loadData() {
         const url = chrome.runtime.getURL('assets/wild_magic.json');
         const res = await fetch(url);
@@ -8,7 +6,6 @@ export const WildMagic = (() => {
         return await res.json();
     }
 
-    // --- Dice helpers ---
     function rollDie(sides) {
         return Math.floor(Math.random() * sides) + 1;
     }
@@ -34,7 +31,6 @@ export const WildMagic = (() => {
         return { outerKey, d100: d100, d20: d20, type: entry.type, description: entry.description };
     }
 
-    // --- DOM helpers ---
     function setText(id, text) {
         const el = document.getElementById(id);
         if (el) el.textContent = text;
@@ -69,7 +65,6 @@ export const WildMagic = (() => {
         el.textContent = type || '—';
     }
 
-    // --- Storage helpers ---
     function appendHistoryItem(item) {
         if (!chrome?.storage) return Promise.resolve();
         return new Promise(resolve => {
@@ -82,7 +77,6 @@ export const WildMagic = (() => {
         });
     }
 
-    // --- Public roll function ---
     async function doRollAndShow() {
         const btn = document.getElementById('rollBtn');
         const debug = document.getElementById('debug');
@@ -159,7 +153,6 @@ export const WildMagic = (() => {
         }
     }
 
-    // --- Exports ---
     return {
         doRollAndShow,
         loadData,

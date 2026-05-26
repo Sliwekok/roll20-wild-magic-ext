@@ -1,5 +1,6 @@
 import { WildMagic } from './WildMagic.js';
 import { Help } from "./Help.js";
+import {Time} from "./Time.js";
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type === 'WILD_MAGIC_TRIGGER') {
@@ -24,6 +25,19 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             chrome.tabs.sendMessage(sender.tab.id, {
                 type: 'HELP_ROLLED',
                 help: data
+            });
+        });
+    }
+
+    if (message.type === 'TIME_TRIGGER') {
+        console.log('Time triggered from content script');
+
+        Time.getTime().then(data => {
+            if (!sender.tab?.id) return;
+
+            chrome.tabs.sendMessage(sender.tab.id, {
+                type: 'HELP_ROLLED',
+                time: data
             });
         });
     }

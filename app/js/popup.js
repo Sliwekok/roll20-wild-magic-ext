@@ -1,5 +1,3 @@
-import { WildMagic } from './WildMagic.js';
-
 function openHistory() {
   const url = chrome.runtime.getURL('./app/html/wildMagic/history.html');
   window.open(url, '_blank');
@@ -12,6 +10,10 @@ function openIndex() {
   const url = chrome.runtime.getURL('./app/html/index.html');
     window.open(url, '_blank');
 }
+function openTime() {
+  const url = chrome.runtime.getURL('./app/html/time/index.html');
+  window.open(url, '_blank');
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   const historyBtn = document.getElementById('historyBtn');
@@ -22,4 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const indexBtn = document.querySelector('.indexBtn');
   if (indexBtn) indexBtn.addEventListener('click', openIndex);
+
+  const timeBtn = document.querySelector('#timeBtn');
+  if (timeBtn) timeBtn.addEventListener('click', openTime);
 });

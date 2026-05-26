@@ -1,5 +1,3 @@
-// history.js: shows saved rolls from chrome.storage.local
-
 function renderHistory(list) {
   const container = document.getElementById('historyList');
   if (!container) return;
