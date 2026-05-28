@@ -60,9 +60,19 @@ export const Time = (() => {
         });
     }
 
+    function deleteTime (key) {
+        console.log(key);
+        return new Promise(resolve => {
+            if (!chrome?.storage) return resolve();
+            console.log('to _delete');
+            chrome.storage.local.removeItem(key, () => resolve());
+        })
+    }
+
     return {
         getTimes,
         addTime,
-        clearTimes
+        clearTimes,
+        deleteTime
     };
 })();
