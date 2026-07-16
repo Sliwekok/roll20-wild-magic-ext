@@ -21,7 +21,7 @@
     "128": "assets/logo128.png"
   },
 
-  "permissions": ["scripting", "activeTab", "storage"],
+  "permissions": ["scripting", "activeTab", "storage", "nativeMessaging"],
 
   "host_permissions": [
     "*://app.roll20.net/*"
