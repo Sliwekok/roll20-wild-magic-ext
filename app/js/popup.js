@@ -1,3 +1,4 @@
+import { WildMagic } from './WildMagic.js';
 function openHistory() {
   const url = chrome.runtime.getURL('./app/html/wildMagic/history.html');
   window.open(url, '_blank');
@@ -27,4 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const timeBtn = document.querySelector('#timeBtn');
   if (timeBtn) timeBtn.addEventListener('click', openTime);
+
+  const rollBtn = document.querySelector('#rollBtn');
+  if (rollBtn) rollBtn.addEventListener('click', WildMagic.doRollAndShow);
+
 });
