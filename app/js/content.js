@@ -30,7 +30,7 @@ onReady(() => {
                         const text = node.textContent?.trim();
                         const textHash = text?.toLowerCase(); // używamy tekstu jako ID
 
-                        if (text && text.toLowerCase().startsWith('wild_magic') && initialized) {
+                        if (text && text.toLowerCase().includes('wild_magic') && initialized) {
                             if (!triggeredMessages.has(textHash)) {
                                 triggeredMessages.add(textHash);
                                 console.log('Matched wild_magic - TRIGGERED');
