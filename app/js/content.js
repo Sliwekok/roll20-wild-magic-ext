@@ -119,7 +119,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.type === 'TIME_ROLLED') {
         console.log('TIME triggered from content script');
 
-        if (message.help.error) return;
+        if (message.time.error) return;
         // send to chat
         let command = message.time.message;
         waitForChatAndSend(command);
